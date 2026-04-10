@@ -187,3 +187,10 @@
 - Prompt 协同开发
 - Agent 行为评估标准
 - 知识库共享与维护
+
+### 6.4 Harness Engineering（Agent 生产化工程）
+- 基本定义：围绕 Agent 构建可运行、可治理、可扩展生产系统的工程方法
+- 与 Prompt Engineering、Context Engineering 的区别
+- 核心组成：运行时编排、工具与环境适配、状态与工件管理、验证反馈回路
+- 关键问题：可靠性、可重复性、错误恢复、安全边界与长期任务控制
+- 与测试、CI/CD、可观测性、安全合规的衔接

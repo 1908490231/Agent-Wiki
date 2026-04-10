@@ -2,10 +2,12 @@
 
 ## 统计
 
-总卡片数：**169** | 工程篇：39 | 模型算法篇：33 | 设计模式篇：19 | 工程实践篇：25 | 生态工具篇：24 | Prompt Engineering 篇：29
+总卡片数：**171** | 工程篇：40 | 模型算法篇：33 | 设计模式篇：19 | 工程实践篇：26 | 生态工具篇：24 | Prompt Engineering 篇：29
 
 ## 最近更新
 
+- [Agent Harness（Agent 脚手架 / 运行时控制层）](../content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。 (2026-04-11)
+- [Harness Engineering（Agent 生产化工程）](../content/04_practices/project-management/harness-engineering.md) - ⭐⭐⭐ - 围绕 Agent 构建可运行、可治理、可扩展生产系统的工程方法 (2026-04-11)
 - [OpenAI Agents SDK](../content/01_engineering/agent-sdks/openai-agents-sdk.md) - ⭐⭐⭐ - OpenAI 官方开源的轻量级多 Agent 编排框架，通过 Handoff、Guardrail、Tracing 三大原语构建生产级 Agent 应用。 (2026-03-26)
 - [MCP（Model Context Protocol）](../content/01_engineering/core-concepts/mcp.md) - ⭐⭐⭐ - Anthropic 提出的开放标准协议，为 AI 应用提供连接外部工具与数据源的统一接口。 (2026-03-26)
 - [Weaviate（AI 原生向量数据库）](../content/01_engineering/databases/weaviate.md) - ⭐⭐⭐ - 开源 AI 原生向量数据库，内置向量化模块和生成模块，支持多模态搜索与混合检索。 (2026-03-26)
@@ -14,8 +16,6 @@
 - [Haystack（AI 应用框架）](../content/01_engineering/frameworks/haystack.md) - ⭐⭐⭐ - deepset 开源的 AI 编排框架，用模块化管道构建 RAG、语义搜索和 Agent 应用。 (2026-03-26)
 - [LlamaIndex（数据框架）](../content/01_engineering/frameworks/llamaindex.md) - ⭐⭐⭐ - 专注于数据连接与检索的 LLM 数据框架，是构建 RAG 应用的核心工具。 (2026-03-26)
 - [Phidata / Agno（Agent 构建框架）](../content/01_engineering/frameworks/phidata.md) - ⭐⭐ - 原名 Phidata，现更名为 Agno，用纯 Python 构建多模态 Agent 的轻量框架，开箱即用。 (2026-03-26)
-- [RabbitMQ（消息代理）](../content/01_engineering/message-queues/rabbitmq.md) - ⭐⭐ - 基于 AMQP 协议的开源消息代理，用于应用间异步通信和任务分发。 (2026-03-26)
-- [Redis（内存数据库/缓存）](../content/01_engineering/message-queues/redis.md) - ⭐⭐ - 高性能内存键值数据库，支持缓存、消息队列、向量搜索，是 AI Agent 系统的核心基础设施。 (2026-03-26)
 
 ## 目录结构导航
 
@@ -24,7 +24,7 @@ content/
 ├── 01_engineering（工程篇）
 │   ├── agent-sdks/  (Agent SDK, 3 篇)
 │   ├── containers/  (容器虚拟化, 2 篇)
-│   ├── core-concepts/  (核心概念, 10 篇)
+│   ├── core-concepts/  (核心概念, 11 篇)
 │   ├── databases/  (数据库架构, 7 篇)
 │   ├── frameworks/  (AI 开发框架, 11 篇)
 │   ├── message-queues/  (缓存消息队列, 4 篇)
@@ -53,7 +53,7 @@ content/
 │   ├── ai-dev-workflow/  (AI 辅助开发流程, 4 篇)
 │   ├── cicd/  (CI/CD, 4 篇)
 │   ├── performance/  (性能优化, 3 篇)
-│   ├── project-management/  (项目管理, 3 篇)
+│   ├── project-management/  (项目管理, 4 篇)
 │   ├── security/  (安全与合规, 5 篇)
 │   └── testing/  (测试方法, 6 篇)
 ├── 05_ecosystem（生态工具篇）
@@ -80,6 +80,7 @@ content/
 
 **核心概念**
 
+- [Agent Harness（Agent 脚手架 / 运行时控制层）](../content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。
 - [Agent Retry（重试机制）](../content/01_engineering/core-concepts/agent-retry.md) - ⭐⭐ - Agent 调用外部服务失败后，按策略自动重新尝试的容错机制。
 - [Function Calling（函数调用）](../content/01_engineering/core-concepts/function-calling.md) - ⭐⭐ - 让大语言模型在需要时生成结构化调用指令，由外部系统执行真实函数并返回结果的机制。
 - [Hooks（钩子机制）](../content/01_engineering/core-concepts/hooks.md) - ⭐⭐ - Agent 执行流程中的"哨卡"，在关键节点自动触发回调函数，实现监控、日志等扩展功能。
@@ -275,6 +276,7 @@ content/
 **项目管理**
 
 - [Agent 项目结构（Agent Project Structure）](../content/04_practices/project-management/agent-project-structure.md) - ⭐⭐ - Agent 应用的推荐目录组织方式，让代码、配置、工具、提示词各归其位
+- [Harness Engineering（Agent 生产化工程）](../content/04_practices/project-management/harness-engineering.md) - ⭐⭐⭐ - 围绕 Agent 构建可运行、可治理、可扩展生产系统的工程方法
 - [团队协作（Team Collaboration）](../content/04_practices/project-management/team-collaboration.md) - ⭐⭐⭐ - Agent 开发团队如何通过 Prompt 版本管理、行为评估和知识库共享实现高效协同
 - [开发规范（Development Standards）](../content/04_practices/project-management/development-standards.md) - ⭐⭐⭐ - Agent 应用开发中代码、Prompt、版本号与文档的标准化规范体系
 
