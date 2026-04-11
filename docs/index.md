@@ -31,17 +31,12 @@ content/
 │   └── web-frameworks/  (Web 开发架构, 2 篇)
 ├── 02_models（模型算法篇）
 │   ├── core-techniques/  (核心技术, 4 篇)
-│   ├── data-processing/  (数据处理工具, 0 篇，待补充)
 │   ├── deployment/  (模型部署与服务化, 9 篇)
-│   ├── dev-tools/  (开发工具, 0 篇，待补充)
 │   ├── evaluation/  (评估体系, 3 篇)
 │   ├── frontier/  (前沿方向, 5 篇)
 │   ├── fundamentals/  (LLM 基础理论, 2 篇)
 │   ├── model-series/  (主流模型系列, 3 篇)
 │   ├── multimodal/  (多模态, 3 篇)
-│   ├── observability/  (可观测性工具, 0 篇，待补充)
-│   ├── ocr/  (OCR 服务, 0 篇，待补充)
-│   ├── speech/  (语音处理, 0 篇，待补充)
 │   └── training/  (训练技术, 4 篇)
 ├── 03_patterns（设计模式篇）
 │   ├── agent-paradigms/  (Agent 经典范式, 3 篇)

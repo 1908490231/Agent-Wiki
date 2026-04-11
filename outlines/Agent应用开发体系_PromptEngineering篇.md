@@ -6,6 +6,58 @@
 
 ---
 
+## 归类导航说明
+
+### 子目录映射表
+
+| outline 二级主题 | 对应 content 子目录 | 归类范围 |
+|---|---|---|
+| 一、提示词基础 | `content/06_prompt-engineering/prompt-basics/` | Prompt 结构、零样本、少样本、系统提示词、指令工程 |
+| 二、上下文工程 | `content/06_prompt-engineering/context-engineering/` | 上下文窗口、构建策略、压缩、多轮上下文、Prompt 层上下文设计 |
+| 三、进阶推理技巧 | `content/06_prompt-engineering/advanced-techniques/` | CoT、ToT、GoT、Self-Consistency、ReAct Prompting、结构化输出 |
+| 四、专项提示技巧 | `content/06_prompt-engineering/specialized-techniques/` | Role Prompting、Decomposition、Meta Prompting、RAG Prompting、多模态 Prompt |
+| 五、提示词优化与评估 | `content/06_prompt-engineering/optimization/` | Prompt 优化、Prompt 评估、版本管理 |
+| 六、常见场景提示词模板 | `content/06_prompt-engineering/templates/` | QA、文本生成、代码生成、数据分析、Agent 场景模板 |
+
+### 什么情况下优先归 Prompt Engineering 篇
+
+1. 当知识点主要关注“如何组织提示词、如何构造上下文、如何引导模型按预期输出”时，优先归 Prompt Engineering 篇。
+2. 当主题是模板、措辞策略、提示结构、推理引导语、结构化输出约束时，优先归本篇。
+3. 与工程篇重叠时，本篇收纳“Prompt 层的上下文与控制策略”，工程篇收纳“运行时系统层的上下文与状态机制”。
+4. 与设计模式篇重叠时，本篇收纳“提示模板与引导方式”，设计模式篇收纳“Agent 任务组织结构”。
+
+### 常见混淆项
+
+| 容易混淆的概念 | 本篇归类 | 不归本篇的情况 | 判断关键点 |
+|---|---|---|---|
+| Prompt 层上下文工程 vs 运行时上下文管理 | 上下文拼装、压缩、提示预算、检索结果注入模板放 `context-engineering/` | 状态持久化、运行时上下文注入、Agent 状态管理放工程篇 | 看重点是提示构造还是系统运行时 |
+| ReAct Prompting vs ReAct 范式 | Thought / Action / Observation 的提示模板写法放 `advanced-techniques/` | 作为 Agent 工作流范式放设计模式篇 | 看重点是 Prompt 形式还是系统结构 |
+| 系统提示词中的 Guardrails vs 工程/实践层 Guardrails | 提示词里的行为约束、格式约束、安全提示放本篇 | SDK Guardrails 能力、生产安全治理放工程篇/工程实践篇 | 看它是提示内容还是系统机制/治理流程 |
+| Prompt 评估 vs Agent 评估平台 | Prompt 级 A/B、模板优化、版本评估放 `optimization/` | 平台化评测工具放生态工具篇 | 看重点是 Prompt 策略还是评测工具平台 |
+
+### 最低锚点规则
+
+- 二级标题代表 `content/06_prompt-engineering/*` 的子目录主题。
+- 三级标题代表可直接生成卡片的提示技巧、策略、模板或比较项。
+- 若没有同名三级条目，但已有对应二级主题，应先补三级锚点再继续写卡。
+
+### 待细分提示策略锚点
+
+新增知识点暂时没有专门槽位时，可优先挂靠以下扩展容器：
+
+- `二、上下文工程`：承载上下文预算、注入策略、对话压缩类主题
+- `三、进阶推理技巧`：承载新型推理提示、结构化控制策略
+- `四、专项提示技巧`：承载场景化 Prompt 方法与复合提示结构
+- `六、常见场景提示词模板`：承载模板型卡片与行业 Prompt 套件
+
+### 粒度说明
+
+- **二级标题 = 子目录主题**，用于确定最终落在哪个 `content/06_prompt-engineering/*` 子目录。
+- **三级标题 = 最小卡片单元**，可以是一种提示技巧、一组模板、一个优化方法或一个横向对比主题。
+- 列表项用于定义该卡片应覆盖的关键问题、边界与适用场景。
+
+---
+
 ## 一、提示词基础
 
 ### 1.1 提示词的基本结构
@@ -80,7 +132,7 @@
 
 ### 3.1 思维链（Chain-of-Thought, CoT）
 - 基本原理：引导模型展示推理过程
-- 零样本 CoT："让我们一步一步思考"
+- 零样本 CoT：“让我们一步一步思考”
 - 少样本 CoT：提供推理示例
 - 自动 CoT（Auto-CoT）
 - 适用场景：数学推理、逻辑分析、复杂决策
@@ -107,6 +159,7 @@
 - 推理 + 行动交替的提示模板设计
 - Thought / Action / Observation 的格式规范
 - 与 Agent 框架的结合
+- 与设计模式篇 ReAct 范式的边界
 - 提示词模板示例
 
 ### 3.6 结构化输出引导

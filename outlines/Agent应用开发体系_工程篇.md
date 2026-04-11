@@ -6,6 +6,58 @@
 
 ---
 
+## 归类导航说明
+
+### 子目录映射表
+
+| outline 二级主题 | 对应 content 子目录 | 归类范围 |
+|---|---|---|
+| 一、Agent 核心技术概念 | `content/01_engineering/core-concepts/` | RAG、Tool Use、MCP、Memory、Hooks、State Management、Agent Harness 等基础概念 |
+| 二、AI 开发框架 | `content/01_engineering/frameworks/` | LangChain、LangGraph、AutoGen、LlamaIndex、DSPy 等开发框架 |
+| 三、Agent SDK | `content/01_engineering/agent-sdks/` | Claude Agent SDK、OpenAI Agents SDK、Google ADK 等 SDK |
+| 四、数据库架构 | `content/01_engineering/databases/` | 关系型数据库、文档数据库、向量数据库 |
+| 五、Web 开发架构 | `content/01_engineering/web-frameworks/` | FastAPI、Uvicorn 等服务化 Web 技术 |
+| 六、缓存消息队列 | `content/01_engineering/message-queues/` | Redis、Celery、RabbitMQ、Kafka |
+| 七、容器虚拟化 | `content/01_engineering/containers/` | Docker、Kubernetes 等容器与编排能力 |
+
+### 优先归入本篇的判断规则
+
+1. 当知识点主要回答“Agent 系统由哪些技术栈和运行机制构成”时，优先归工程篇。
+2. 当知识点关注的是框架、SDK、数据库、消息队列、Web 服务、容器化等工程底座，而不是生产流程或治理方法时，优先归工程篇。
+3. `outline` 是第一归类依据；若与其他篇章重叠，按“技术构件 / 运行时机制”视角优先归本篇。
+4. 只有当知识点更偏“测试、上线、安全实践、性能治理”时，才转去工程实践篇。
+
+### 常见混淆项
+
+| 容易混淆的概念 | 本篇归类 | 不归本篇的情况 | 判断关键点 |
+|---|---|---|---|
+| Agent Harness vs Harness Engineering | `Agent Harness` 放 `core-concepts/` | `Harness Engineering` 放工程实践篇 `project-management/` | 前者讲 Agent 运行时控制层，后者讲生产化工程方法 |
+| Context Engineering | 运行时上下文注入、裁剪、状态衔接放 `core-concepts/` | 纯 Prompt 层上下文构建策略放 Prompt Engineering 篇 | 看关注点是“系统运行时管理”还是“提示词构造” |
+| Guardrails | 作为 SDK 能力、运行时约束机制时可挂工程篇概念或 SDK 条目 | 作为安全治理实践、风控流程时放工程实践篇 | 看它是产品能力/系统机制，还是治理实践 |
+| Hooks | Claude Code / Agent 框架事件钩子放本篇 | 将 Hook 用于流程规范、自动审查时可延展到工程实践篇 | 看重点是机制本身还是开发流程 |
+
+### 最低锚点规则
+
+- 二级标题代表子目录主题。
+- 三级标题代表可直接生成卡片的知识点、工具或对比项。
+- 如果暂时没有同名三级条目，但已有可挂靠的二级主题，必须先补三级锚点，不要因为缺少同名条目而停止。
+
+### 扩展主题锚点
+
+当新增知识点暂时找不到更细分类时，优先挂靠以下现有主题：
+
+- `一、Agent 核心技术概念`：承载运行时机制、治理控制、上下文与状态相关概念
+- `二、AI 开发框架`：承载新增框架或框架对比
+- `三、Agent SDK`：承载新增 SDK、SDK 能力对比与编排接口
+
+### 粒度说明
+
+- **二级标题 = 子目录主题**，用于决定最终落入哪个 `content/01_engineering/*` 子目录。
+- **三级标题 = 可生成卡片的最小知识点**，可以是概念、工具、SDK、框架或对比项。
+- 同一三级标题下的列表项用于说明该卡片最少应覆盖的内容范围。
+
+---
+
 ## 一、Agent 核心技术概念
 
 ### 1.1 RAG（检索增强生成）
@@ -66,6 +118,7 @@
 - 上下文注入策略
 - 动态上下文构建
 - 上下文压缩与裁剪
+- 与 Prompt Engineering 篇中“提示词级上下文工程”的边界
 
 ### 1.8 State Management（状态管理）
 - Agent 状态机设计
@@ -79,7 +132,7 @@
 - 典型组成：任务入口、工具调度、状态与上下文管理、记忆、权限控制、验证反馈回路
 - 关键能力：长任务连续性维护、结构化交接、外部评估、自我修正
 - 与 Agent Framework 的区别：Harness 更偏运行时控制与工程约束层，Framework 更偏开发框架与组件封装
-- 与 Context Engineering、Guardrails、Eval 的关系
+- 与 Harness Engineering、Context Engineering、Guardrails、Eval 的关系
 
 ---
 
@@ -260,7 +313,7 @@
 - Agent 应用容器化
 
 ### 7.2 Kubernetes
-- 容器编排与调度
-- Pod 与 Service 设计
-- 自动扩缩容
-- Agent 服务集群化部署
+- 容器编排
+- 服务发现与负载均衡
+- 弹性伸缩
+- Agent 集群部署
