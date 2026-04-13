@@ -69,13 +69,13 @@ RAG 的工作过程分为离线和在线两个阶段：
 
 ```mermaid
 graph TD
-    subgraph 离线阶段：构建索引
+    subgraph offline["离线阶段：构建索引"]
         A[原始文档<br/>PDF / Word / 网页] --> B[文档切分<br/>Chunking]
         B --> C[Embedding 向量化]
         C --> D[(向量数据库)]
     end
 
-    subgraph 在线阶段：检索 + 生成
+    subgraph online["在线阶段：检索 + 生成"]
         E[用户提问] --> F[问题向量化]
         F --> G{相似度搜索}
         D -.-> G
