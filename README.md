@@ -2,6 +2,8 @@
 
 > 一站式 Agent 应用开发知识库 —— 从零开始搞懂 AI Agent
 
+**在线阅读**：[**learnagent.wiki**](https://learnagent.wiki) —— 本仓库的渲染站点，阅读体验更佳；站内同步收录 **MCP Wiki / Skills Wiki / CLI Wiki** 等姊妹知识库，欢迎一并探索。
+
 ## 这个项目是什么？
 
 如果你对 AI Agent 感兴趣，但面对铺天盖地的概念和工具不知从何下手，这个知识库就是为你准备的。
