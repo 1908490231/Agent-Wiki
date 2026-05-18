@@ -42,6 +42,14 @@ Agent-Wiki 把 Agent 应用开发涉及的知识拆成一张张知识卡片，�
 | [生态工具篇](content/05_ecosystem/) | 24 | 可观测性平台、评估工具、OCR、语音处理、数据处理工具链 |
 | [Prompt Engineering 篇](content/06_prompt-engineering/) | 29 | 提示词基础、上下文工程、思维链、场景模板 |
 
+## 最近更新
+
+<!-- AUTO-GENERATED:RECENT-START -->
+- [Hermes Agent](content/01_engineering/frameworks/hermes-agent.md) - ⭐⭐⭐ - Nous Research 开源的自我进化型 Agent 框架，内置学习闭环与四层记忆系统 (2026-05-17)
+- [Kimi Agent Swarm（Kimi 智能体集群）](content/03_patterns/multi-agent/kimi-agent-swarm.md) - ⭐⭐⭐⭐ - 月之暗面在 Kimi 模型中内生的多智能体集群协作机制，可动态调度上百个子 Agent 并行完成复杂任务。 (2026-05-17)
+- [Agent Harness（Agent 脚手架 / 运行时控制层）](content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。 (2026-04-11)
+<!-- AUTO-GENERATED:RECENT-END -->
+
 ## 不知道从哪开始？
 
 如果你是新手，推荐从这几张卡片入门：
