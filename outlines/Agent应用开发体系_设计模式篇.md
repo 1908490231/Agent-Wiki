@@ -139,6 +139,13 @@
 - 动态选择专家 Agent
 - 与 Master-Worker 的边界
 
+### 3.6 Agent Swarm 模式（扩展锚点）
+- 模型内生的多智能体集群协作机制
+- 动态任务拆解与子 Agent 调度
+- 大规模并行执行能力（100+ 子 Agent）
+- 与 Master-Worker 的区别：无需人工预设规则
+- 典型实现：Kimi K2.5/K2.6 的 Agent Swarm
+
 ---
 
 ## 四、企业级架构模式

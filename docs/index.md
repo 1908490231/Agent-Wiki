@@ -2,10 +2,12 @@
 
 ## 统计
 
-总卡片数：**171** | 工程篇：40 | 模型算法篇：33 | 设计模式篇：19 | 工程实践篇：26 | 生态工具篇：24 | Prompt Engineering 篇：29
+总卡片数：**173** | 工程篇：41 | 模型算法篇：33 | 设计模式篇：20 | 工程实践篇：26 | 生态工具篇：24 | Prompt Engineering 篇：29
 
 ## 最近更新
 
+- [Hermes Agent](../content/01_engineering/frameworks/hermes-agent.md) - ⭐⭐⭐ - Nous Research 开源的自我进化型 Agent 框架，内置学习闭环与四层记忆系统 (2026-05-17)
+- [Kimi Agent Swarm（Kimi 智能体集群）](../content/03_patterns/multi-agent/kimi-agent-swarm.md) - ⭐⭐⭐⭐ - 月之暗面在 Kimi 模型中内生的多智能体集群协作机制，可动态调度上百个子 Agent 并行完成复杂任务。 (2026-05-17)
 - [Agent Harness（Agent 脚手架 / 运行时控制层）](../content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。 (2026-04-11)
 - [Harness Engineering（Agent 生产化工程）](../content/04_practices/project-management/harness-engineering.md) - ⭐⭐⭐ - 围绕 Agent 构建可运行、可治理、可扩展生产系统的工程方法 (2026-04-11)
 - [OpenAI Agents SDK](../content/01_engineering/agent-sdks/openai-agents-sdk.md) - ⭐⭐⭐ - OpenAI 官方开源的轻量级多 Agent 编排框架，通过 Handoff、Guardrail、Tracing 三大原语构建生产级 Agent 应用。 (2026-03-26)
@@ -14,8 +16,6 @@
 - [AutoGen（微软多Agent框架）](../content/01_engineering/frameworks/autogen.md) - ⭐⭐⭐ - 微软开源的多智能体协作框架，通过异步消息驱动多个 Agent 角色分工完成复杂任务。 (2026-03-26)
 - [AutoGPT（自主Agent平台）](../content/01_engineering/frameworks/autogpt.md) - ⭐⭐⭐ - 开源自主 Agent 平台，支持可视化搭建和部署持续运行的 AI Agent 工作流。 (2026-03-26)
 - [Haystack（AI 应用框架）](../content/01_engineering/frameworks/haystack.md) - ⭐⭐⭐ - deepset 开源的 AI 编排框架，用模块化管道构建 RAG、语义搜索和 Agent 应用。 (2026-03-26)
-- [LlamaIndex（数据框架）](../content/01_engineering/frameworks/llamaindex.md) - ⭐⭐⭐ - 专注于数据连接与检索的 LLM 数据框架，是构建 RAG 应用的核心工具。 (2026-03-26)
-- [Phidata / Agno（Agent 构建框架）](../content/01_engineering/frameworks/phidata.md) - ⭐⭐ - 原名 Phidata，现更名为 Agno，用纯 Python 构建多模态 Agent 的轻量框架，开箱即用。 (2026-03-26)
 
 ## 目录结构导航
 
@@ -26,7 +26,7 @@ content/
 │   ├── containers/  (容器虚拟化, 2 篇)
 │   ├── core-concepts/  (核心概念, 11 篇)
 │   ├── databases/  (数据库架构, 7 篇)
-│   ├── frameworks/  (AI 开发框架, 11 篇)
+│   ├── frameworks/  (AI 开发框架, 12 篇)
 │   ├── message-queues/  (缓存消息队列, 4 篇)
 │   └── web-frameworks/  (Web 开发架构, 2 篇)
 ├── 02_models（模型算法篇）
@@ -41,7 +41,7 @@ content/
 ├── 03_patterns（设计模式篇）
 │   ├── agent-paradigms/  (Agent 经典范式, 3 篇)
 │   ├── enterprise/  (企业级架构模式, 3 篇)
-│   ├── multi-agent/  (多 Agent 协作模式, 6 篇)
+│   ├── multi-agent/  (多 Agent 协作模式, 7 篇)
 │   ├── selection-guide/  (模式选型指南, 2 篇)
 │   └── single-agent/  (单 Agent 模式, 5 篇)
 ├── 04_practices（工程实践篇）
@@ -95,6 +95,7 @@ content/
 - [CAMEL-AI（多Agent通信框架）](../content/01_engineering/frameworks/camel-ai.md) - ⭐⭐⭐ - 通过角色扮演驱动多智能体自主对话协作的开源框架，首创 Inception Prompting 机制。
 - [DSPy（声明式 LLM 编程框架）](../content/01_engineering/frameworks/dspy.md) - ⭐⭐⭐ - 斯坦福开源的声明式 LLM 编程框架，用 Python 代码代替手写提示词，通过优化器自动编译出高质量 Prompt。
 - [Haystack（AI 应用框架）](../content/01_engineering/frameworks/haystack.md) - ⭐⭐⭐ - deepset 开源的 AI 编排框架，用模块化管道构建 RAG、语义搜索和 Agent 应用。
+- [Hermes Agent](../content/01_engineering/frameworks/hermes-agent.md) - ⭐⭐⭐ - Nous Research 开源的自我进化型 Agent 框架，内置学习闭环与四层记忆系统
 - [LangChain（LLM 应用开发框架）](../content/01_engineering/frameworks/langchain.md) - ⭐⭐⭐ - 用管道符把 LLM、工具、提示词像乐高一样拼在一起的编排框架，快速构建 AI 应用。
 - [LangGraph](../content/01_engineering/frameworks/langgraph.md) - ⭐⭐⭐ - LangChain 生态下的图编排框架，用有向图组织 Agent 多步骤流程，原生支持分支、循环和中断恢复。
 - [Letta（有状态Agent框架）](../content/01_engineering/frameworks/letta.md) - ⭐⭐⭐ - 基于 MemGPT 论文的有状态 Agent 框架，Agent 能自编辑记忆、跨会话学习和持久化状态。
@@ -212,6 +213,7 @@ content/
 **多 Agent 协作模式**
 
 - [Handoff 模式（任务移交）](../content/03_patterns/multi-agent/handoff.md) - ⭐⭐⭐ - Agent 之间按条件主动移交控制权和上下文，实现专业化分工协作
+- [Kimi Agent Swarm（Kimi 智能体集群）](../content/03_patterns/multi-agent/kimi-agent-swarm.md) - ⭐⭐⭐⭐ - 月之暗面在 Kimi 模型中内生的多智能体集群协作机制，可动态调度上百个子 Agent 并行完成复杂任务。
 - [Master-Worker 模式（主从分发）](../content/03_patterns/multi-agent/master-worker.md) - ⭐⭐⭐ - 一个主 Agent 拆任务、分任务，多个 Worker Agent 并行干活，最后主 Agent 汇总结果。
 - [分层模式（Hierarchical）](../content/03_patterns/multi-agent/hierarchical.md) - ⭐⭐⭐ - 多层级 Agent 树状组织，通过逐层委托实现大规模任务的分解与协调。
 - [流水线模式（Pipeline）](../content/03_patterns/multi-agent/pipeline.md) - ⭐⭐⭐ - 多个 Agent 按固定顺序依次处理，前一个的输出作为后一个的输入，形成单向流水线。

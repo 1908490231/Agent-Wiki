@@ -117,6 +117,7 @@
 - DeepSeek 系列：MoE 架构、推理增强
 - Yi 系列（零一万物）：长上下文、多语言
 - Mistral 系列：高效推理、MoE 架构
+- Kimi 系列（月之暗面）：长上下文、多模态、Agent 集群
 
 ---
 
@@ -210,6 +211,7 @@
 - Gemini —— Google
 - SiliconFlow —— 硅基流动
 - ModelScope —— 魔搭
+- Kimi（Moonshot AI）—— 月之暗面
 
 ### 6.3 硬件支持
 - NVIDIA（GPU 显卡）
