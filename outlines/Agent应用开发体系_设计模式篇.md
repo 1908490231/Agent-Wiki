@@ -85,6 +85,14 @@
 - 迭代式自我优化
 - 与 Prompt 层同名技术的边界
 
+### 1.6 Loop Engineering（循环工程）
+- 设计能让 Agent 自主迭代的循环系统，替代人工逐条编写提示词
+- 五要素：明确目标、上下文管理、可调用工具、产出评估、停止标准
+- 五种 Loop 模式：Retry Loop、Plan-Execute-Verify、Explore-Narrow、Human-in-the-Loop、Lifecycle Loop
+- 人与 Agent 的角色分工：人是系统设计者，Agent 是自主执行者
+- 与 Prompt Engineering、Context Engineering、Harness Engineering 的关系
+- 适用场景：复杂任务、需要自主迭代的场景
+
 ---
 
 ## 二、单 Agent 模式

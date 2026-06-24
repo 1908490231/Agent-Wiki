@@ -45,9 +45,9 @@ Agent-Wiki 把 Agent 应用开发涉及的知识拆成一张张知识卡片，�
 ## 最近更新
 
 <!-- AUTO-GENERATED:RECENT-START -->
+- [Loop Engineering（循环工程）](content/03_patterns/agent-paradigms/loop-engineering.md) - ⭐⭐⭐⭐ - 设计能让 Agent 自主迭代的循环系统，替代人工逐条编写提示词的工程范式 (2026-06-24)
 - [Hermes Agent](content/01_engineering/frameworks/hermes-agent.md) - ⭐⭐⭐ - Nous Research 开源的自我进化型 Agent 框架，内置学习闭环与四层记忆系统 (2026-05-17)
 - [Kimi Agent Swarm（Kimi 智能体集群）](content/03_patterns/multi-agent/kimi-agent-swarm.md) - ⭐⭐⭐⭐ - 月之暗面在 Kimi 模型中内生的多智能体集群协作机制，可动态调度上百个子 Agent 并行完成复杂任务。 (2026-05-17)
-- [Agent Harness（Agent 脚手架 / 运行时控制层）](content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。 (2026-04-11)
 <!-- AUTO-GENERATED:RECENT-END -->
 
 ## 不知道从哪开始？

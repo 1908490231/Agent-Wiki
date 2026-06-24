@@ -2,10 +2,11 @@
 
 ## 统计
 
-总卡片数：**173** | 工程篇：41 | 模型算法篇：33 | 设计模式篇：20 | 工程实践篇：26 | 生态工具篇：24 | Prompt Engineering 篇：29
+总卡片数：**174** | 工程篇：41 | 模型算法篇：33 | 设计模式篇：21 | 工程实践篇：26 | 生态工具篇：24 | Prompt Engineering 篇：29
 
 ## 最近更新
 
+- [Loop Engineering（循环工程）](../content/03_patterns/agent-paradigms/loop-engineering.md) - ⭐⭐⭐⭐ - 设计能让 Agent 自主迭代的循环系统，替代人工逐条编写提示词的工程范式 (2026-06-24)
 - [Hermes Agent](../content/01_engineering/frameworks/hermes-agent.md) - ⭐⭐⭐ - Nous Research 开源的自我进化型 Agent 框架，内置学习闭环与四层记忆系统 (2026-05-17)
 - [Kimi Agent Swarm（Kimi 智能体集群）](../content/03_patterns/multi-agent/kimi-agent-swarm.md) - ⭐⭐⭐⭐ - 月之暗面在 Kimi 模型中内生的多智能体集群协作机制，可动态调度上百个子 Agent 并行完成复杂任务。 (2026-05-17)
 - [Agent Harness（Agent 脚手架 / 运行时控制层）](../content/01_engineering/core-concepts/agent-harness.md) - ⭐⭐⭐ - 让模型能稳定作为 Agent 运行的一层工程化控制系统，负责调度、约束、反馈与恢复。 (2026-04-11)
@@ -15,7 +16,6 @@
 - [Weaviate（AI 原生向量数据库）](../content/01_engineering/databases/weaviate.md) - ⭐⭐⭐ - 开源 AI 原生向量数据库，内置向量化模块和生成模块，支持多模态搜索与混合检索。 (2026-03-26)
 - [AutoGen（微软多Agent框架）](../content/01_engineering/frameworks/autogen.md) - ⭐⭐⭐ - 微软开源的多智能体协作框架，通过异步消息驱动多个 Agent 角色分工完成复杂任务。 (2026-03-26)
 - [AutoGPT（自主Agent平台）](../content/01_engineering/frameworks/autogpt.md) - ⭐⭐⭐ - 开源自主 Agent 平台，支持可视化搭建和部署持续运行的 AI Agent 工作流。 (2026-03-26)
-- [Haystack（AI 应用框架）](../content/01_engineering/frameworks/haystack.md) - ⭐⭐⭐ - deepset 开源的 AI 编排框架，用模块化管道构建 RAG、语义搜索和 Agent 应用。 (2026-03-26)
 
 ## 目录结构导航
 
@@ -39,7 +39,7 @@ content/
 │   ├── multimodal/  (多模态, 3 篇)
 │   └── training/  (训练技术, 4 篇)
 ├── 03_patterns（设计模式篇）
-│   ├── agent-paradigms/  (Agent 经典范式, 3 篇)
+│   ├── agent-paradigms/  (Agent 经典范式, 4 篇)
 │   ├── enterprise/  (企业级架构模式, 3 篇)
 │   ├── multi-agent/  (多 Agent 协作模式, 7 篇)
 │   ├── selection-guide/  (模式选型指南, 2 篇)
@@ -198,6 +198,7 @@ content/
 
 **Agent 经典范式**
 
+- [Loop Engineering（循环工程）](../content/03_patterns/agent-paradigms/loop-engineering.md) - ⭐⭐⭐⭐ - 设计能让 Agent 自主迭代的循环系统，替代人工逐条编写提示词的工程范式
 - [Plan-and-Solve（计划与执行）](../content/03_patterns/agent-paradigms/plan-and-solve.md) - ⭐⭐⭐ - 先制定计划、再按计划执行的 Agent 范式，适合结构清晰的多步骤任务
 - [ReAct（推理与行动协同）](../content/03_patterns/agent-paradigms/react.md) - ⭐⭐⭐ - 将推理与行动交替进行的 Agent 经典范式，让模型能够边想边做、边做边调整。
 - [Reflection（反思/自我纠错模式）](../content/03_patterns/agent-paradigms/reflection.md) - ⭐⭐⭐ - Agent 对自身输出进行批判性审视并迭代改进的设计模式。
